@@ -1,6 +1,10 @@
 <?php
 namespace ABN\GDPR\GravityForms;
 
+
+/**
+ * Here we miss-use the infobox plugin instead of building a whole custom Gravity Forms field.
+ */
 class Infobox {
 
     public function __construct(){
@@ -13,7 +17,9 @@ class Infobox {
     }
 
     /**
-     * Always stop the enqueing of the Infobox CSS because we load our own
+     * Always stop the enqueing of the Infobox CSS because we load our own.
+     * Just include the Less file from the /assets/infobox.less if you would like the default styling of copy it and build your own.
+     * 
      */
     public function overwriteInfoboxOptions( $option ) {
 
