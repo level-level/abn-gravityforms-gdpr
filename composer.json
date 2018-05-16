@@ -1,0 +1,8 @@
+{
+    "name": "level-level/abn-gravityforms-gdpr",
+    "type": "wordpress-muplugin",
+    "require": {
+        "wpackagist-plugin/gravity-forms-infobox-field": "^1.5"
+    },
+    "version": "0.1.0"
+}
