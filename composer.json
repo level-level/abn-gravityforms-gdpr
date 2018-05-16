@@ -1,9 +1,14 @@
 {
     "name": "level-level/abn-gravityforms-gdpr",
-    "type": "package",
+    "type": "wordpress-muplugin",
     "require": {
         "wpackagist-plugin/gravity-forms-infobox-field": "^1.5"
     },
     "version": "0.1.0",
-    "license": "MIT"
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "abn-gravity-forms-gdpr-infobox.php"
+        ]
+    }
 }
