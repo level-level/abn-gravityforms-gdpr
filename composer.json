@@ -8,7 +8,7 @@
     "license": "MIT",
     "autoload": {
         "files": [
-            "abn-gravity-forms-gdpr-infobox.php"
+            "abn-gravityforms-gdpr-infobox.php"
         ]
     }
 }
