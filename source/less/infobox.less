@@ -1,0 +1,68 @@
+.gform_wrapper .gform_infobox {
+    padding: 0.5em 1em 0.5em 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+    min-height: 3em;
+
+    position: relative;
+}
+
+.gform_infobox:before {
+
+    content: "a";
+    display: block;
+    position: relative !important;
+    line-height: 1px;
+    width: 24px;
+    height: 24px;
+
+    background: url("source/images/infobox.svg") no-repeat 0 0 #b8daff;
+    background-size: cover;
+}
+
+.gform_infobox .gfield_label,
+.gform_infobox .gfield_description {
+    margin: 0 !important;
+	padding: 0 !important;
+}
+
+.gfield_infobox_more_info_button:before {
+    content: "▼";
+}
+
+.gfield_infobox_more_display {
+	display: inline-block !important;
+	width: 100%;
+}
+
+.gfield_infobox_more_display > table {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.gfield_infobox_more_display th,
+.gfield_infobox_more_display td {
+    padding: 4px;
+}
+
+.gfield_description ul li,
+.gsection_description ul li,
+.gfield_html_formatted ul li {
+    list-style: outside none number !important;
+}
+
+.gfield_description ol li,
+.gsection_description ol li,
+.gfield_html_formatted ol li {
+    list-style: outside none disc !important;
+}
+
+.gfield_description ol,
+.gsection_description ol,
+.gfield_html_formatted ol,
+.gfield_description ul,
+.gsection_description ul,
+.gfield_html_formatted ul {
+    margin: 0 0 1.5em 3em !important;
+}

@@ -12,6 +12,7 @@ class Infobox {
     }
 
     public function gravityFormsInfoboxInit(){
+        add_action( 'wp_print_scripts', array( $this, 'dequeue_script' ), 100 );
         add_filter( 'option_gravityformsaddon_itsg_gf_infobox_settings', array( $this, 'overwriteInfoboxOptions') );
         add_filter( 'gform_pre_render', array( $this, 'gformPreRender'), 10, 1 );
     }
@@ -19,7 +20,7 @@ class Infobox {
     /**
      * Always stop the enqueing of the Infobox CSS because we load our own.
      * Just include the Less file from the /assets/infobox.less if you would like the default styling of copy it and build your own.
-     * 
+     *
      */
     public function overwriteInfoboxOptions( $option ) {
 
@@ -28,6 +29,11 @@ class Infobox {
         }
         return $option;
     }
+
+    public function dequeue_script() {
+        wp_dequeue_script( 'itsp_infobox_script' );
+    }
+
 
 
     /**
