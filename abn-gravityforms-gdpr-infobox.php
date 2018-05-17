@@ -21,8 +21,8 @@ class Infobox {
     }
 
     public function add_gdpr_icon_styling () {
-        echo '<style> .gform_infobox .gfield_description:first-child:before {
-            background: url("' . plugin_dir_url(__FILE__) . 'source/images/infobox.svg") no-repeat 0 0 #b8daff;
+        echo '<style>.gform_infobox .gfield_description:first-child:before {
+            background-image: url("' . plugin_dir_url(__FILE__) . 'source/images/infobox.svg");
         }</style>';
     }
 
