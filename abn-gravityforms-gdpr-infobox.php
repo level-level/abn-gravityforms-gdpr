@@ -12,8 +12,10 @@ class Infobox {
     }
 
     public function gravityFormsInfoboxInit(){
+        $option = 'gravityformsaddon_itsg_gf_infobox_settings';
         add_action( 'wp_print_scripts', array( $this, 'dequeue_script' ), 100 );
-        add_filter( 'option_gravityformsaddon_itsg_gf_infobox_settings', array( $this, 'overwriteInfoboxOptions') );
+        add_filter( 'default_option_'.$option.'', array( $this, 'overwriteInfoboxOptions') );
+        add_filter( 'pre_option_'.$option.'', array( $this, 'overwriteInfoboxOptions') );
         add_filter( 'gform_pre_render', array( $this, 'gformPreRender'), 10, 1 );
     }
 
@@ -23,10 +25,11 @@ class Infobox {
      *
      */
     public function overwriteInfoboxOptions( $option ) {
-
-        if( array_key_exists( 'includecss', $option ) ){
-           $option['includecss'] = false;
+        if (!is_array($option)) {
+            $option = array();
         }
+
+        $option['includecss'] = false;
         return $option;
     }
 

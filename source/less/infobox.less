@@ -1,3 +1,10 @@
+@gdpr-background-color: #F6EDFF;
+@gdpr-text-color: #222222;
+@gdpr-link-color: #009286;
+
+@gdpr-border-color: #f7f7f9;
+@gdpr-border-2-color: #b8daff;
+
 .gform_wrapper .gform_infobox {
     padding: 0.5em 1em 0.5em 2em;
 	margin-top: 1em;
@@ -7,23 +14,27 @@
     position: relative;
 }
 
-.gform_infobox:before {
-
-    content: "a";
-    display: block;
-    position: relative !important;
-    line-height: 1px;
-    width: 24px;
-    height: 24px;
-
-    background: url("source/images/infobox.svg") no-repeat 0 0 #b8daff;
-    background-size: cover;
-}
-
 .gform_infobox .gfield_label,
 .gform_infobox .gfield_description {
     margin: 0 !important;
-	padding: 0 !important;
+	padding: 16px 16px 16px 56px !important;
+    background-color: @gdpr-background-color;
+    color: @gdpr-text-color;
+    position: relative;
+    &:before{
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url("/wp-content/mu-plugins/abn-gravityforms-gdpr/source/images/infobox.svg") no-repeat 0 0 #b8daff;
+        background-size: cover;
+        position: absolute;
+        left: 16px;
+        top: 16px;
+    }
+    a{
+      color: @gdpr-link-color;
+    }
 }
 
 .gfield_infobox_more_info_button:before {
