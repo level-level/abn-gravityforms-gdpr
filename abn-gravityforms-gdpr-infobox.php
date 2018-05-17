@@ -17,6 +17,13 @@ class Infobox {
         add_filter( 'default_option_'.$option.'', array( $this, 'overwriteInfoboxOptions') );
         add_filter( 'pre_option_'.$option.'', array( $this, 'overwriteInfoboxOptions') );
         add_filter( 'gform_pre_render', array( $this, 'gformPreRender'), 10, 1 );
+        add_action( 'wp_footer', array($this, 'add_gdpr_icon_styling') );
+    }
+
+    public function add_gdpr_icon_styling () {
+        echo '<style> .gform_infobox .gfield_description:first-child:before {
+            background: url("' . plugin_dir_url(__FILE__) . 'source/images/infobox.svg") no-repeat 0 0 #b8daff;
+        }</style>';
     }
 
     /**
