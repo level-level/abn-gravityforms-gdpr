@@ -60,7 +60,7 @@ class Infobox {
 
                 // Default text if it's empty to mimic adding the default text.
                 if( $field['description'] === '' ){
-                    $field['description'] = 'We gebruiken de persoonlijke informatie die u invult, om uw verzoek (of aanvraag) te verwerken. Wilt u meer weten over hoe we omgaan met uw persoonlijke informatie? <a target="_blank" rel=noopener  href="https://www.abnamro.nl/nl/prive/abnamro/privacy/toelichting-privacy.html">Lees meer in ons privacy statement.</a>';
+                    $field['description'] = 'We gebruiken de persoonlijke informatie die u invult, om uw verzoek (of aanvraag) te verwerken. Wilt u meer weten over hoe we omgaan met uw persoonlijke informatie? <a target="_blank" rel=noopener  href="https://www.abnamro.nl/nl/prive/abnamro/privacy/toelichting-privacy.html" linktrackname="jit_message_privacy_link">Lees meer in ons privacy statement.</a>';
                 }
 
             }
